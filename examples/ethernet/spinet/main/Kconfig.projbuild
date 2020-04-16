@@ -1,0 +1,74 @@
+menu "Spinet Configuration"
+
+    config SPINET_SPI_HOST
+        int "SPI Host Number"
+        range 0 2
+        default 1
+        help
+            Set the SPI host used to communicate with the SPI Ethernet Controller.
+
+    config SPINET_SCLK_GPIO
+        int "SPI SCLK GPIO number"
+        range 0 33
+        default 15
+        help
+            Set the GPIO number used by SPI SCLK.
+
+    config SPINET_MOSI_GPIO
+        int "SPI MOSI GPIO number"
+        range 0 33
+        default 12
+        help
+            Set the GPIO number used by SPI MOSI.
+
+    config SPINET_MISO_GPIO
+        int "SPI MISO GPIO number"
+        range 0 33
+        default 13
+        help
+            Set the GPIO number used by SPI MISO.
+
+    config SPINET_CS_GPIO
+        int "SPI CS GPIO number"
+        range 0 33
+        default 14
+        help
+            Set the GPIO number used by SPI CS.
+
+    config SPINET_SPI_CLOCK_MHZ
+        int "SPI clock speed (MHz)"
+        range 5 20
+        default 10
+        help
+            Set the clock speed (MHz) of SPI interface.
+
+    config SPINET_STATUS_OUT_GPIO
+        int "Status output GPIO number"
+        default 17
+        help
+            Set the GPIO number used by status output.
+
+    config SPINET_STATUS_IN_GPIO
+        int "Status input GPIO number"
+        default 16
+        help
+            Set the GPIO number used by status input.
+
+    config SPINET_SEND_REQUEST_GPIO
+        int "Send Request GPIO number"
+        default 5
+        help
+            Set the GPIO number used by send request.
+
+    config SPINET_INT_GPIO
+        int "Interrupt GPIO number"
+        default 2
+        help
+            Set the GPIO number used by interrupt.
+
+    config SPINET_USER_LED_GPIO
+        int "User LED GPIO number"
+        default 4
+        help
+            Set the GPIO number used by user LED.
+endmenu
